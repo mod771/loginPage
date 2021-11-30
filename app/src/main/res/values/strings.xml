@@ -1,0 +1,31 @@
+<resources>
+
+    <string name="app_name">loginPage</string>
+    <string name="title_activity_create_account">CreateAccountActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="security_question">Security Question</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create Account</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="store_delivery_app">Store Delivery App</string>
+    <string name="email">Email</string>
+    <string name="answer">Answer</string>
+    <string name="password">Password</string>
+    <string-array name="questions_menu">
+        <item>What is your favorite color\?</item>
+        <item>What is the name of your first pet\?</item>
+        <item>What city were you born in\?</item>
+        <item>What is your mother\'s maiden name\?</item>
+    </string-array>
+    <string-array name="vendorSelection">
+        <item>All Vendors</item>
+        <item>Vendors You Use</item>
+    </string-array>
+</resources>

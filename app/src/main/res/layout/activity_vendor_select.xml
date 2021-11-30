@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VendorSelectActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="34dp"
+        android:text="Vendor Selection"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/filterDropDown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/searchTextField"
+        android:layout_width="276dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Search"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/schSubmitButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filterDropDown" />
+
+    <Spinner
+        android:id="@+id/filterDropDown"
+        android:layout_width="276dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/searchTextField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/recent1"
+        android:layout_width="214dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="1dp"
+        android:text="Vendors Available "
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/vendorsAvailable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/schSubmitButton" />
+
+    <Button
+        android:id="@+id/schSubmitButton"
+        android:layout_width="123dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="6dp"
+        android:backgroundTint="@color/black"
+        android:text="Search"
+        app:layout_constraintBottom_toTopOf="@+id/recent1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchTextField" />
+
+    <Button
+        android:id="@+id/schHomeButton"
+        android:layout_width="127dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="93dp"
+        android:layout_marginEnd="140dp"
+        android:backgroundTint="@color/black"
+        android:text="Submit"
+        app:layout_constraintBottom_toTopOf="@+id/cancelButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recent2" />
+
+    <TextView
+        android:id="@+id/recent2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="177dp"
+        android:text="Vendors Selected"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addButton" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="116dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/black"
+        android:text="Add"
+        app:layout_constraintBottom_toTopOf="@+id/recent2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vendorsAvailable" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="105dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="2dp"
+        android:backgroundTint="@color/black"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/schHomeButton" />
+
+    <ScrollView
+        android:id="@+id/vendorsAvailable"
+        android:layout_width="409dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/addButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recent1">
+
+        <LinearLayout
+            android:id="@+id/results"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/vendorsSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginBottom="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recent2"
+        app:layout_constraintVertical_bias="0.875" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
